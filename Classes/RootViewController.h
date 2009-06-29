@@ -6,9 +6,16 @@
 //  Copyright deadbeaf.org 2009. All rights reserved.
 //
 
-@interface RootViewController : UITableViewController <UISearchBarDelegate>
+@class Database;
+
+@interface RootViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 {
    NSMutableArray *addresses;
+   IBOutlet UITableView *table_view;
+   Database *db;
 }
+
+@property (nonatomic, retain) UITableView *table_view;
+@property (nonatomic, retain) Database *db;
 
 @end

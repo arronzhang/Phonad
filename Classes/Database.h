@@ -16,5 +16,6 @@
 
 // collect all phone numbers and create index
 - (void) prepare;
+- (NSArray *)query:(NSString *)number_prefix;
 
 @end

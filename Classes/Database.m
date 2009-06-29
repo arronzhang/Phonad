@@ -8,7 +8,23 @@
 
 #import "Database.h"
 #import <AddressBook/AddressBook.h>
-//#import <AddressBookUI/AddressBookUI.h>
+
+@interface Database (Private)
+- (NSString *) normalize:(NSString *)src;
+@end
+
+@implementation Database (Private)
+
+- (NSString *) normalize:(NSString *)src
+{
+   NSString *ret = [src stringByReplacingOccurrencesOfString:@" " withString:@""];
+   ret = [ret stringByReplacingOccurrencesOfString:@"(" withString:@""];
+   ret = [ret stringByReplacingOccurrencesOfString:@")" withString:@""];
+   ret = [ret stringByReplacingOccurrencesOfString:@"-" withString:@""];
+   return ret;
+}
+
+@end
 
 @implementation Database
 
@@ -35,15 +51,31 @@
    for (size_t i=0; i<N; i++) {
       ABRecordRef person = [all_people objectAtIndex:i];
       ABRecordID rec_id = ABRecordGetRecordID(person);
-      //NSString* name = (NSString *)ABRecordCopyValue(person_one, kABPersonFirstNameProperty);
-   
+      const NSString *first_name = ABRecordCopyValue(person, kABPersonFirstNameProperty);
+      const NSString *last_name  = ABRecordCopyValue(person, kABPersonLastNameProperty);
       const ABMultiValueRef *abmvr = ABRecordCopyValue(person, kABPersonPhoneProperty);
+      NSArray *keys = [NSArray arrayWithObjects:@"id", @"first", @"last", nil];
+      NSArray *vals = [NSArray arrayWithObjects:[NSNumber numberWithInt:rec_id], first_name, last_name, nil];
+      NSDictionary *person_dict = [NSDictionary dictionaryWithObjects:vals forKeys:keys];
+
       NSArray *phone_numbers = (NSArray *)ABMultiValueCopyArrayOfAllValues(abmvr);
       for (NSString *phone_number in phone_numbers) {
-         [dictionary setObject:[NSNumber numberWithInt:rec_id] forKey:phone_number];
-         NSLog(@"phone number = %@", phone_number);
+         phone_number = [self normalize:phone_number];
+         [dictionary setObject:person_dict forKey:phone_number];
+         NSLog(@"phone number = %@, person=%@", phone_number, person_dict);
       }
    }
 }
+
+// FIXME: too slow search
+- (NSArray *)query:(NSString *)number_prefix
+{
+   NSMutableArray *result = [NSMutableArray array];
+   for (NSString *number in dictionary)
+      if ([number hasPrefix:number_prefix])
+         [result addObject:[dictionary objectForKey:number]];
+   return result;
+}
+
 
 @end

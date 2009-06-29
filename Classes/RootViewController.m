@@ -11,6 +11,7 @@
 
 @implementation RootViewController
 
+@synthesize table_view, db;
 
 - (void)viewDidLoad
 {
@@ -145,10 +146,10 @@
 
 - (void)dealloc
 {
+   if (db) [db release];
    [addresses release];
    [super dealloc];
 }
 
 
 @end
-

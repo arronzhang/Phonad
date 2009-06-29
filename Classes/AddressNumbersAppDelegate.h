@@ -7,16 +7,17 @@
 //
 
 @class Database;
+@class RootViewController;
 
 @interface AddressNumbersAppDelegate : NSObject <UIApplicationDelegate>
 {
    UIWindow *window;
-   UINavigationController *navigationController;
+   RootViewController *rootViewController;
    Database *db;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, retain) IBOutlet RootViewController *rootViewController;
 @property (nonatomic, retain) Database *db;
 
 @end
