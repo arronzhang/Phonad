@@ -12,6 +12,7 @@
 {
    NSArray *addresses;
    IBOutlet UITableView *table_view;
+   IBOutlet UISearchBar *search_bar;
    Database *db;
 }
 

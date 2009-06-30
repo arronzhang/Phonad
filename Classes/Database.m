@@ -63,7 +63,6 @@
          
          phone_number = [self normalize:phone_number];
          [dictionary setObject:person_dict forKey:phone_number];
-         NSLog(@"phone number = %@, person=%@", phone_number, person_dict);
       }
    }
 }
