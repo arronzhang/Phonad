@@ -58,9 +58,8 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     
    NSDictionary *person = [addresses objectAtIndex:indexPath.row];
-   NSString *first_name = [person objectForKey:@"first"];
-   NSString *last_name = [person objectForKey:@"last"];
-   cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", last_name, first_name];
+   NSString *name = [person objectForKey:@"name"];
+   cell.textLabel.text = name;
    cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
    cell.detailTextLabel.text = [person objectForKey:@"phone"];
 
@@ -71,14 +70,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
    NSDictionary *person = [addresses objectAtIndex:indexPath.row];
-   NSString *first_name = [person objectForKey:@"first"];
-   NSString *last_name = [person objectForKey:@"last"];
+   NSString *name = [person objectForKey:@"name"];
    
    ABAddressBookRef ab = ABAddressBookCreate();
    ABRecordRef person_rec = ABAddressBookGetPersonWithRecordID(ab, [[person objectForKey:@"id"] intValue]);
 
    ABPersonViewController *abpvc = [[ABPersonViewController alloc] initWithNibName:nil bundle:nil];
-   abpvc.title = [NSString stringWithFormat:@"%@ %@", last_name, first_name];
+   abpvc.title = name;
    abpvc.displayedPerson = person_rec;
 
    [self.navigationController pushViewController:abpvc animated:YES];

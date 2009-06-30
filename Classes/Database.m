@@ -51,14 +51,18 @@
    for (size_t i=0; i<N; i++) {
       ABRecordRef person = [all_people objectAtIndex:i];
       ABRecordID rec_id = ABRecordGetRecordID(person);
-      const NSString *first_name = ABRecordCopyValue(person, kABPersonFirstNameProperty);
-      const NSString *last_name  = ABRecordCopyValue(person, kABPersonLastNameProperty);
+      NSString *first_name = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
+      NSString *last_name  = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
+      NSString *name = last_name ? [NSString stringWithFormat:@"%@ ", last_name] : @"";
+      if (first_name)
+         name = [name stringByAppendingString:first_name];
+
       const ABMultiValueRef *abmvr = ABRecordCopyValue(person, kABPersonPhoneProperty);
 
       NSArray *phone_numbers = (NSArray *)ABMultiValueCopyArrayOfAllValues(abmvr);
       for (NSString *phone_number in phone_numbers) {
-         NSArray *keys = [NSArray arrayWithObjects:@"id", @"first", @"last", @"phone", nil];
-         NSArray *vals = [NSArray arrayWithObjects:[NSNumber numberWithInt:rec_id], first_name, last_name, phone_number, nil];
+         NSArray *keys = [NSArray arrayWithObjects:@"id", @"name", @"phone", nil];
+         NSArray *vals = [NSArray arrayWithObjects:[NSNumber numberWithInt:rec_id], name, phone_number, nil];
          NSDictionary *person_dict = [NSDictionary dictionaryWithObjects:vals forKeys:keys];
          
          phone_number = [self normalize:phone_number];
