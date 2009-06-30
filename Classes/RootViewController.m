@@ -23,7 +23,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
    [super viewWillAppear:animated];
-   self.navigationController.navigationBarHidden = YES;
+   [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 /*
@@ -33,7 +33,7 @@
 */
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
-   self.navigationController.navigationBarHidden = NO;
+   [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 /*
 - (void)viewDidDisappear:(BOOL)animated {
@@ -112,6 +112,7 @@
 
    [self.navigationController pushViewController:abpvc animated:YES];
    [abpvc release];
+   [self.table_view deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 /*
