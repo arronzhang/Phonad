@@ -13,7 +13,7 @@
 @implementation AddressNumbersAppDelegate
 
 @synthesize window;
-@synthesize rootViewController;
+@synthesize navigationController;
 @synthesize db;
 
 #pragma mark -
@@ -23,8 +23,9 @@
 {
    db = [[Database alloc] init];
    [db prepare];
-   rootViewController.db = db;
-	[window addSubview:rootViewController.view];
+   RootViewController *rvc = (RootViewController *)navigationController.topViewController;
+   rvc.db = db;
+	[window addSubview:navigationController.view];
    [window makeKeyAndVisible];
 }
 
@@ -40,7 +41,7 @@
 - (void)dealloc
 {
    [db release];
-	[rootViewController release];
+	[navigationController release];
 	[window release];
 	[super dealloc];
 }

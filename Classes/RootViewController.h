@@ -10,12 +10,13 @@
 
 @interface RootViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 {
-   NSMutableArray *addresses;
+   NSArray *addresses;
    IBOutlet UITableView *table_view;
    Database *db;
 }
 
 @property (nonatomic, retain) UITableView *table_view;
 @property (nonatomic, retain) Database *db;
+@property (nonatomic, retain) NSArray *addresses;
 
 @end

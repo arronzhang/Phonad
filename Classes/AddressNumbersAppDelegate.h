@@ -12,12 +12,12 @@
 @interface AddressNumbersAppDelegate : NSObject <UIApplicationDelegate>
 {
    UIWindow *window;
-   RootViewController *rootViewController;
+   UINavigationController *navigationController;
    Database *db;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet RootViewController *rootViewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) Database *db;
 
 @end

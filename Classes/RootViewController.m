@@ -7,33 +7,34 @@
 //
 
 #import "RootViewController.h"
-
+#import "Database.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 @implementation RootViewController
 
-@synthesize table_view, db;
+@synthesize table_view, db, addresses;
 
 - (void)viewDidLoad
 {
    [super viewDidLoad];
-   addresses = [[NSMutableArray alloc] init];
+   self.title = @"Search";
 }
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+   [super viewWillAppear:animated];
+   self.navigationController.navigationBarHidden = YES;
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 }
 */
-/*
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
+   self.navigationController.navigationBarHidden = NO;
 }
-*/
 /*
 - (void)viewDidDisappear:(BOOL)animated {
 	[super viewDidDisappear:animated];
@@ -82,27 +83,36 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     
-   cell.text = [addresses objectAtIndex:indexPath.row];
+   NSDictionary *person = [addresses objectAtIndex:indexPath.row];
+   NSString *first_name = [person objectForKey:@"first"];
+   NSString *last_name = [person objectForKey:@"last"];
+   cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", last_name, first_name];
+   cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+   cell.detailTextLabel.text = [person objectForKey:@"phone"];
 
    return cell;
 }
 
-
-
-/*
 // Override to support row selection in the table view.
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+   NSDictionary *person = [addresses objectAtIndex:indexPath.row];
+   NSString *first_name = [person objectForKey:@"first"];
+   NSString *last_name = [person objectForKey:@"last"];
+   
+   ABAddressBookRef ab = ABAddressBookCreate();
+   ABRecordRef person_rec = ABAddressBookGetPersonWithRecordID(ab, [[person objectForKey:@"id"] intValue]);
 
-    // Navigation logic may go here -- for example, create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController animated:YES];
-	// [anotherViewController release];
+   ABPersonViewController *abpvc = [[ABPersonViewController alloc] initWithNibName:nil bundle:nil];
+   abpvc.title = [NSString stringWithFormat:@"%@ %@", last_name, first_name];
+   abpvc.displayedPerson = person_rec;
+
+   [self.navigationController pushViewController:abpvc animated:YES];
+   [abpvc release];
 }
-*/
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -151,5 +161,13 @@
    [super dealloc];
 }
 
+#pragma mark UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+   NSArray *result = [db query:searchText];
+   self.addresses = result;
+   [self.table_view reloadData];
+}
 
 @end
