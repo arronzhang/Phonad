@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* AddressNumbersAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AddressNumbersAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		92452FE10FFB3EB3000BDCA4 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92452FE00FFB3EB3000BDCA4 /* AppIcon.png */; };
+		9245301E0FFB4058000BDCA4 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92452FE00FFB3EB3000BDCA4 /* AppIcon.png */; };
+		92542A600FF98928009091EA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92542A5F0FF98928009091EA /* AddressBookUI.framework */; };
+		92AA5D440FFABD5C009D77C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		92AA5D450FFABD5C009D77C7 /* AddressNumbersAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AddressNumbersAppDelegate.m */; };
+		92AA5D460FFABD5C009D77C7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		92AA5D470FFABD5C009D77C7 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = B907118D0FF7626D005F6227 /* Database.m */; };
+		92AA5D490FFABD5C009D77C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		92AA5D4A0FFABD5C009D77C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		92AA5D4B0FFABD5C009D77C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		92AA5D4C0FFABD5C009D77C7 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90711B50FF764E6005F6227 /* AddressBook.framework */; };
+		92AA5D4D0FFABD5C009D77C7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92542A5F0FF98928009091EA /* AddressBookUI.framework */; };
+		92AA5D550FFABD83009D77C7 /* SplashWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AA5D540FFABD83009D77C7 /* SplashWindow.xib */; };
+		92AA5D5B0FFABE00009D77C7 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
+		92AA5D6D0FFABE78009D77C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AA5D6C0FFABE78009D77C7 /* Default.png */; };
+		92AA5D6E0FFABE78009D77C7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AA5D6C0FFABE78009D77C7 /* Default.png */; };
+		B907118E0FF7626D005F6227 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = B907118D0FF7626D005F6227 /* Database.m */; };
+		B90711B60FF764E6005F6227 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90711B50FF764E6005F6227 /* AddressBook.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* AddressNumbersAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressNumbersAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* AddressNumbersAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressNumbersAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Phonad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phonad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		28A0AAE50D9B0CCF005BE974 /* AddressNumbers_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressNumbers_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* AddressNumbers-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AddressNumbers-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		92452FE00FFB3EB3000BDCA4 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = resource/AppIcon.png; sourceTree = "<group>"; };
+		92542A5F0FF98928009091EA /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		92AA5D510FFABD5D009D77C7 /* AddressNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AA5D530FFABD5D009D77C7 /* AddressNumbers-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddressNumbers-Info copy.plist"; sourceTree = "<group>"; };
+		92AA5D540FFABD83009D77C7 /* SplashWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashWindow.xib; sourceTree = "<group>"; };
+		92AA5D6C0FFABE78009D77C7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B907118C0FF7626D005F6227 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		B907118D0FF7626D005F6227 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		B90711B50FF764E6005F6227 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				B90711B60FF764E6005F6227 /* AddressBook.framework in Frameworks */,
+				92542A600FF98928009091EA /* AddressBookUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AA5D480FFABD5C009D77C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AA5D490FFABD5C009D77C7 /* Foundation.framework in Frameworks */,
+				92AA5D4A0FFABD5C009D77C7 /* UIKit.framework in Frameworks */,
+				92AA5D4B0FFABD5C009D77C7 /* CoreGraphics.framework in Frameworks */,
+				92AA5D4C0FFABD5C009D77C7 /* AddressBook.framework in Frameworks */,
+				92AA5D4D0FFABD5C009D77C7 /* AddressBookUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* AddressNumbersAppDelegate.h */,
+				1D3623250D0F684500981E51 /* AddressNumbersAppDelegate.m */,
+				B907118C0FF7626D005F6227 /* Database.h */,
+				B907118D0FF7626D005F6227 /* Database.m */,
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Phonad.app */,
+				92AA5D510FFABD5D009D77C7 /* AddressNumbers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* AddressNumbers_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* AddressNumbers-Info.plist */,
+				92AA5D530FFABD5D009D77C7 /* AddressNumbers-Info copy.plist */,
+				92AA5D540FFABD83009D77C7 /* SplashWindow.xib */,
+				92AA5D6C0FFABE78009D77C7 /* Default.png */,
+				92452FE00FFB3EB3000BDCA4 /* AppIcon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92542A5F0FF98928009091EA /* AddressBookUI.framework */,
+				B90711B50FF764E6005F6227 /* AddressBook.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Phonad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Phonad" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Phonad;
+			productName = AddressNumbers;
+			productReference = 1D6058910D05DD3D006BFB54 /* Phonad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92AA5D3F0FFABD5C009D77C7 /* SplashScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92AA5D4E0FFABD5C009D77C7 /* Build configuration list for PBXNativeTarget "SplashScreen" */;
+			buildPhases = (
+				92AA5D400FFABD5C009D77C7 /* Resources */,
+				92AA5D430FFABD5C009D77C7 /* Sources */,
+				92AA5D480FFABD5C009D77C7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SplashScreen;
+			productName = AddressNumbers;
+			productReference = 92AA5D510FFABD5D009D77C7 /* AddressNumbers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Phonad" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Phonad */,
+				92AA5D3F0FFABD5C009D77C7 /* SplashScreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
+				92AA5D6D0FFABE78009D77C7 /* Default.png in Resources */,
+				9245301E0FFB4058000BDCA4 /* AppIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AA5D400FFABD5C009D77C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AA5D550FFABD83009D77C7 /* SplashWindow.xib in Resources */,
+				92AA5D5B0FFABE00009D77C7 /* RootViewController.xib in Resources */,
+				92AA5D6E0FFABE78009D77C7 /* Default.png in Resources */,
+				92452FE10FFB3EB3000BDCA4 /* AppIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* AddressNumbersAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				B907118E0FF7626D005F6227 /* Database.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92AA5D430FFABD5C009D77C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92AA5D440FFABD5C009D77C7 /* main.m in Sources */,
+				92AA5D450FFABD5C009D77C7 /* AddressNumbersAppDelegate.m in Sources */,
+				92AA5D460FFABD5C009D77C7 /* RootViewController.m in Sources */,
+				92AA5D470FFABD5C009D77C7 /* Database.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AddressNumbers_Prefix.pch;
+				INFOPLIST_FILE = "AddressNumbers-Info.plist";
+				PRODUCT_NAME = Phonad;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Motohiro Takayama";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AddressNumbers_Prefix.pch;
+				INFOPLIST_FILE = "AddressNumbers-Info.plist";
+				PRODUCT_NAME = Phonad;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A9FAB8AD-A8CD-4BDA-89EE-BE0956736084";
+			};
+			name = Release;
+		};
+		92AA5D4F0FFABD5C009D77C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AddressNumbers_Prefix.pch;
+				INFOPLIST_FILE = "/Users/mootoh/prj/iphone/AddressNumbers/AddressNumbers-Info copy.plist";
+				PRODUCT_NAME = AddressNumbers;
+			};
+			name = Debug;
+		};
+		92AA5D500FFABD5C009D77C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AddressNumbers_Prefix.pch;
+				INFOPLIST_FILE = "/Users/mootoh/prj/iphone/AddressNumbers/AddressNumbers-Info copy.plist";
+				PRODUCT_NAME = AddressNumbers;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Phonad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92AA5D4E0FFABD5C009D77C7 /* Build configuration list for PBXNativeTarget "SplashScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92AA5D4F0FFABD5C009D77C7 /* Debug */,
+				92AA5D500FFABD5C009D77C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Phonad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
