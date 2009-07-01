@@ -15,6 +15,7 @@
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		92452FE10FFB3EB3000BDCA4 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92452FE00FFB3EB3000BDCA4 /* AppIcon.png */; };
 		92542A600FF98928009091EA /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92542A5F0FF98928009091EA /* AddressBookUI.framework */; };
 		92AA5D440FFABD5C009D77C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		92AA5D450FFABD5C009D77C7 /* AddressNumbersAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AddressNumbersAppDelegate.m */; };
@@ -47,6 +48,7 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AddressNumbers-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AddressNumbers-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		92452FE00FFB3EB3000BDCA4 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = resource/AppIcon.png; sourceTree = "<group>"; };
 		92542A5F0FF98928009091EA /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		92AA5D510FFABD5D009D77C7 /* AddressNumbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressNumbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92AA5D530FFABD5D009D77C7 /* AddressNumbers-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddressNumbers-Info copy.plist"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				92AA5D530FFABD5D009D77C7 /* AddressNumbers-Info copy.plist */,
 				92AA5D540FFABD83009D77C7 /* SplashWindow.xib */,
 				92AA5D6C0FFABE78009D77C7 /* Default.png */,
+				92452FE00FFB3EB3000BDCA4 /* AppIcon.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				92AA5D550FFABD83009D77C7 /* SplashWindow.xib in Resources */,
 				92AA5D5B0FFABE00009D77C7 /* RootViewController.xib in Resources */,
 				92AA5D6E0FFABE78009D77C7 /* Default.png in Resources */,
+				92452FE10FFB3EB3000BDCA4 /* AppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
