@@ -18,6 +18,8 @@
 #define APPID @"4ef1e1cd"
 #define ENGINE_URL @"http://dev.voicecloud.cn:1028/index.htm"
 
+#define KEYWORD_ID @"\\\\192.168.72.37\\usr_gr/masr_007db_041508-03-25_11-59-48-271.abnf"
+
 #import "iFlyISR/IFlyRecognizeControl.h"
 
 
@@ -31,6 +33,8 @@
    IBOutlet UISearchBar *search_bar;
    Database *db;
     IFlyRecognizeControl		*_iFlyRecognizeControl;
+    NSString					*_keywordID;
+    BOOL    isUpload;
 }
 
 @property (nonatomic, retain) UITableView *table_view;

@@ -17,6 +17,10 @@
 - (void)viewDidLoad
 {
    [super viewDidLoad];
+    
+    _keywordID = KEYWORD_ID;
+
+    
    self.title = @"Search";
 //   [search_bar becomeFirstResponder];
     
@@ -29,8 +33,6 @@
 	_iFlyRecognizeControl.delegate = self;
 	[self.view addSubview:_iFlyRecognizeControl];
     
-    [_iFlyRecognizeControl setEngine:@"sms" theEngineParam:nil theGrammarID:nil];
-
     [self searchText:@""];
     
     // Set the return key and keyboard appearance of the search bar
@@ -49,11 +51,16 @@
     NSString *str = @"";
 
     if ([addresses count]) {
+        isUpload = YES;
         for (NSInteger i = 0; i < [addresses count]; i++) {
             str = [NSString stringWithFormat:@"%@,%@", str, [[addresses objectAtIndex:i] objectForKey:@"name"]];
         }
+        [_iFlyRecognizeControl setEngine:@"keywordupload" theEngineParam:str theGrammarID:nil];
+        if([_iFlyRecognizeControl start])
+        {
+        }
     }
-    NSLog(@"address %@", str);
+    NSLog(@"key %@", str);
 }
 
 
@@ -75,6 +82,11 @@
 - (IBAction)startSay:(id)sender{
 //    NSLog(@"say...");
     [search_bar resignFirstResponder];
+    
+//    [_iFlyRecognizeControl setEngine:@"sms" theEngineParam:nil theGrammarID:nil];
+
+    [_iFlyRecognizeControl setEngine:@"keyword" theEngineParam:nil theGrammarID:_keywordID];
+
     if([_iFlyRecognizeControl start])
 	{
 	}
@@ -112,8 +124,13 @@
 - (void)onResult:(IFlyRecognizeControl *)iFlyRecognizeControl theResult:(NSArray *)resultArray
 {
     NSLog(@"onResult %@", resultArray);
-	[self onRecognizeResult:resultArray];	
-	
+    if (isUpload) {
+        isUpload = NO;
+		_keywordID = [[resultArray objectAtIndex:0] retain];
+		NSLog(@"UIkeywordController onResult:%@",_keywordID);
+    }else{
+        [self onRecognizeResult:resultArray];	
+    }
 }
 
 #pragma mark Table view methods
