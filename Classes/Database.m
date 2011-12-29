@@ -53,7 +53,7 @@
       ABRecordID rec_id = ABRecordGetRecordID(person);
       NSString *first_name = (NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
       NSString *last_name  = (NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
-      NSString *name = last_name ? [NSString stringWithFormat:@"%@ ", last_name] : @"";
+      NSString *name = last_name ? [NSString stringWithFormat:@"%@", last_name] : @"";
       if (first_name)
          name = [name stringByAppendingString:first_name];
 
@@ -75,9 +75,12 @@
 - (NSArray *)query:(NSString *)number_prefix
 {
    NSMutableArray *result = [NSMutableArray array];
-   for (NSString *number in dictionary)
-      if ([number hasPrefix:number_prefix])
+    for (NSString *number in dictionary){
+        NSString *name = [[dictionary objectForKey:number] objectForKey:@"name"];
+       if (!number_prefix.length || [number hasPrefix:number_prefix] || [name hasPrefix:number_prefix]) {
          [result addObject:[dictionary objectForKey:number]];
+       }
+    }
    return result;
 }
 

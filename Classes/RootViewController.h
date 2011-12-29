@@ -20,4 +20,8 @@
 @property (nonatomic, retain) Database *db;
 @property (nonatomic, retain) NSArray *addresses;
 
+- (void)searchText: (NSString *)text;
+
+- (IBAction)startSay:(id)sender;
+
 @end

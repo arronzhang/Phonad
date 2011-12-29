@@ -18,21 +18,35 @@
 {
    [super viewDidLoad];
    self.title = @"Search";
-   [search_bar becomeFirstResponder];
+//   [search_bar becomeFirstResponder];
+    [self searchText:@""];
+    
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
    [super viewWillAppear:animated];
    [self.navigationController setNavigationBarHidden:YES animated:YES];
-   if (addresses.count == 0)
-      table_view.hidden = YES;
+//   if (addresses.count == 0)
+//      table_view.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
+
+- (IBAction)startSay:(id)sender{
+    NSLog(@"say...");
+}
+
+
+- (void)searchText: (NSString *)text{
+    search_bar.text = text;
+    [self searchBar:search_bar textDidChange:@""];
 }
 
 #pragma mark Table view methods
@@ -138,8 +152,12 @@
    NSArray *result = [db query:searchText];
    self.addresses = result;
 
-   table_view.hidden = (addresses.count == 0);
+//   table_view.hidden = (addresses.count == 0);
    [self.table_view reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
 }
 
 @end
