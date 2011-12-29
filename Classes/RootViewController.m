@@ -60,7 +60,7 @@
 
 - (IBAction)startSay:(id)sender{
 //    NSLog(@"say...");
-    [searchBar resignFirstResponder];
+    [search_bar resignFirstResponder];
     if([_iFlyRecognizeControl start])
 	{
 	}
