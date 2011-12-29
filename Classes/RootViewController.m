@@ -32,6 +32,20 @@
     [_iFlyRecognizeControl setEngine:@"sms" theEngineParam:nil theGrammarID:nil];
 
     [self searchText:@""];
+    
+    // Set the return key and keyboard appearance of the search bar
+    for (UIView *searchBarSubview in [search_bar subviews]) {
+        if ([searchBarSubview conformsToProtocol:@protocol(UITextInputTraits)]) {
+            @try {
+                [(UITextField *)searchBarSubview setReturnKeyType:UIReturnKeyDone];
+                [(UITextField *)searchBarSubview setEnablesReturnKeyAutomatically:NO];
+            }
+            @catch (NSException * e) {
+                // ignore exception
+            }
+        }
+    }
+    
     NSString *str = @"";
 
     if ([addresses count]) {
