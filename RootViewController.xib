@@ -65,14 +65,14 @@
 						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="685011984"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="396653857"/>
+						<reference key="NSNextKeyView" ref="287514529"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUIContentMode">3</int>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBText"/>
 						<string key="IBPrompt"/>
-						<string key="IBPlaceholder">通过姓名或拼音搜索</string>
+						<string key="IBPlaceholder">通过姓名搜索</string>
 						<object class="IBUITextInputTraits" key="IBTextInputTraits">
 							<int key="IBUIAutocorrectionType">1</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -101,7 +101,7 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUINavigationBar" id="396653857">
+					<object class="IBUINavigationBar" id="287514529">
 						<reference key="NSNextResponder" ref="685011984"/>
 						<int key="NSvFlags">290</int>
 						<string key="NSFrameSize">{320, 44}</string>
@@ -111,14 +111,14 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUINavigationItem" id="38780222">
-								<reference key="IBUINavigationBar" ref="396653857"/>
+							<object class="IBUINavigationItem" id="912345411">
+								<reference key="IBUINavigationBar" ref="287514529"/>
 								<string key="IBUITitle">Title</string>
-								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="856974421">
+								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="261221133">
 									<string key="IBUITitle">说名字</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
-									<reference key="IBUINavigationItem" ref="38780222"/>
+									<reference key="IBUINavigationItem" ref="912345411"/>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
@@ -191,7 +191,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">titleView</string>
-						<reference key="source" ref="38780222"/>
+						<reference key="source" ref="912345411"/>
 						<reference key="destination" ref="222170363"/>
 					</object>
 					<int key="connectionID">50</int>
@@ -199,7 +199,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">startSay:</string>
-						<reference key="source" ref="856974421"/>
+						<reference key="source" ref="261221133"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">51</int>
@@ -235,7 +235,7 @@
 							<reference ref="265002776"/>
 							<reference ref="135403417"/>
 							<reference ref="222170363"/>
-							<reference ref="396653857"/>
+							<reference ref="287514529"/>
 						</object>
 						<reference key="parent" ref="231031770"/>
 					</object>
@@ -254,26 +254,26 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">47</int>
-						<reference key="object" ref="396653857"/>
+						<reference key="object" ref="287514529"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="38780222"/>
+							<reference ref="912345411"/>
 						</object>
 						<reference key="parent" ref="685011984"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
-						<reference key="object" ref="38780222"/>
+						<reference key="object" ref="912345411"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="856974421"/>
+							<reference ref="261221133"/>
 						</object>
-						<reference key="parent" ref="396653857"/>
+						<reference key="parent" ref="287514529"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">49</int>
-						<reference key="object" ref="856974421"/>
-						<reference key="parent" ref="38780222"/>
+						<reference key="object" ref="261221133"/>
+						<reference key="parent" ref="912345411"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">27</int>

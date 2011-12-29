@@ -35,6 +35,12 @@
 		92AA5D5B0FFABE00009D77C7 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		B907118E0FF7626D005F6227 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = B907118D0FF7626D005F6227 /* Database.m */; };
 		B90711B60FF764E6005F6227 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90711B50FF764E6005F6227 /* AddressBook.framework */; };
+		D11288C514AC638E009F9968 /* iFlyTTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11288C314AC638E009F9968 /* iFlyTTS.framework */; };
+		D11288C614AC638E009F9968 /* iFlyISR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11288C414AC638E009F9968 /* iFlyISR.framework */; };
+		D11288CC14AC6AEF009F9968 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11288CB14AC6AEF009F9968 /* CFNetwork.framework */; };
+		D11288CE14AC6AF5009F9968 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11288CD14AC6AF5009F9968 /* SystemConfiguration.framework */; };
+		D11288D014AC6BA0009F9968 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11288CF14AC6BA0009F9968 /* AudioToolbox.framework */; };
+		D11288D214AC6BE3009F9968 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11288D114AC6BE3009F9968 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,12 @@
 		B907118C0FF7626D005F6227 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		B907118D0FF7626D005F6227 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		B90711B50FF764E6005F6227 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D11288C314AC638E009F9968 /* iFlyTTS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iFlyTTS.framework; path = ifly/iFlyTTS.framework; sourceTree = "<group>"; };
+		D11288C414AC638E009F9968 /* iFlyISR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iFlyISR.framework; path = ifly/iFlyISR.framework; sourceTree = "<group>"; };
+		D11288CB14AC6AEF009F9968 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D11288CD14AC6AF5009F9968 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D11288CF14AC6BA0009F9968 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D11288D114AC6BE3009F9968 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +81,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11288D214AC6BE3009F9968 /* QuartzCore.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				D11288D014AC6BA0009F9968 /* AudioToolbox.framework in Frameworks */,
+				D11288CE14AC6AF5009F9968 /* SystemConfiguration.framework in Frameworks */,
+				D11288CC14AC6AEF009F9968 /* CFNetwork.framework in Frameworks */,
+				D11288C514AC638E009F9968 /* iFlyTTS.framework in Frameworks */,
+				D11288C614AC638E009F9968 /* iFlyISR.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				B90711B60FF764E6005F6227 /* AddressBook.framework in Frameworks */,
 				92542A600FF98928009091EA /* AddressBookUI.framework in Frameworks */,
 			);
@@ -154,6 +172,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D11288D114AC6BE3009F9968 /* QuartzCore.framework */,
+				D11288CF14AC6BA0009F9968 /* AudioToolbox.framework */,
+				D11288CD14AC6AF5009F9968 /* SystemConfiguration.framework */,
+				D11288CB14AC6AEF009F9968 /* CFNetwork.framework */,
+				D11288C314AC638E009F9968 /* iFlyTTS.framework */,
+				D11288C414AC638E009F9968 /* iFlyISR.framework */,
 				92542A5F0FF98928009091EA /* AddressBookUI.framework */,
 				B90711B50FF764E6005F6227 /* AddressBook.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
@@ -288,6 +312,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ifly\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -304,6 +332,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Motohiro Takayama";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ifly\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AddressNumbers_Prefix.pch;
 				INFOPLIST_FILE = "AddressNumbers-Info.plist";

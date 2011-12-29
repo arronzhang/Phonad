@@ -19,8 +19,27 @@
    [super viewDidLoad];
    self.title = @"Search";
 //   [search_bar becomeFirstResponder];
-    [self searchText:@""];
     
+    NSString *initParam = [[NSString alloc] initWithFormat:
+						   @"server_url=%@,appid=%@",ENGINE_URL,APPID];
+	// 识别控件
+	_iFlyRecognizeControl = [[IFlyRecognizeControl alloc]initWithOrigin:H_CONTROL_ORIGIN theInitParam:initParam];
+	[_iFlyRecognizeControl setSampleRate:16000];
+    [initParam release];
+	_iFlyRecognizeControl.delegate = self;
+	[self.view addSubview:_iFlyRecognizeControl];
+    
+    [_iFlyRecognizeControl setEngine:@"sms" theEngineParam:nil theGrammarID:nil];
+
+    [self searchText:@""];
+    NSString *str = @"";
+
+    if ([addresses count]) {
+        for (NSInteger i = 0; i < [addresses count]; i++) {
+            str = [NSString stringWithFormat:@"%@,%@", str, [[addresses objectAtIndex:i] objectForKey:@"name"]];
+        }
+    }
+    NSLog(@"address %@", str);
 }
 
 
@@ -40,13 +59,47 @@
 
 
 - (IBAction)startSay:(id)sender{
-    NSLog(@"say...");
+//    NSLog(@"say...");
+    [searchBar resignFirstResponder];
+    if([_iFlyRecognizeControl start])
+	{
+	}
 }
-
 
 - (void)searchText: (NSString *)text{
     search_bar.text = text;
-    [self searchBar:search_bar textDidChange:@""];
+    [self searchBar:search_bar textDidChange:text];
+}
+
+#pragma mark 
+#pragma mark 接口回调
+
+//	识别结束回调
+- (void)onRecognizeEnd:(IFlyRecognizeControl *)iFlyRecognizeControl theError:(SpeechError) error
+{
+	NSLog(@"识别结束回调finish.....");
+	NSLog(@"getUpflow:%d,getDownflow:%d",[iFlyRecognizeControl getUpflow],[iFlyRecognizeControl getDownflow]);
+	
+}
+
+- (void)onUpdateTextView:(NSString *)sentence
+{
+	
+    [self searchText:sentence];
+	NSLog(@"str %@", sentence);
+}
+
+- (void)onRecognizeResult:(NSArray *)array
+{
+	[self performSelectorOnMainThread:@selector(onUpdateTextView:) withObject:
+	 [[array objectAtIndex:0] objectForKey:@"NAME"] waitUntilDone:YES];
+}
+
+- (void)onResult:(IFlyRecognizeControl *)iFlyRecognizeControl theResult:(NSArray *)resultArray
+{
+    NSLog(@"onResult %@", resultArray);
+	[self onRecognizeResult:resultArray];	
+	
 }
 
 #pragma mark Table view methods

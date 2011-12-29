@@ -77,7 +77,8 @@
    NSMutableArray *result = [NSMutableArray array];
     for (NSString *number in dictionary){
         NSString *name = [[dictionary objectForKey:number] objectForKey:@"name"];
-       if (!number_prefix.length || [number hasPrefix:number_prefix] || [name hasPrefix:number_prefix]) {
+        
+       if (!number_prefix.length || [number rangeOfString:number_prefix].location != NSNotFound || [name rangeOfString:number_prefix].location != NSNotFound) {
          [result addObject:[dictionary objectForKey:number]];
        }
     }
